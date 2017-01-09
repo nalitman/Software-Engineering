@@ -6,7 +6,7 @@ public class EmptyFrameViewer
    {
       JFrame frame = new JFrame();
       frame.setSize(300, 400);
-      frame.setTitle("An empty frame");
+      frame.setTitle("Check dis frame yo");
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setVisible(true);
    }

@@ -2,7 +2,9 @@ import javax.swing.JFrame;
 
 public class RectangleViewer
 {
-   public static void main(String[] args)
+    final static int ANIMATION_TIME_IN_SECONDS = 60;
+    
+   public static void main(String[] args) throws InterruptedException
    {
       JFrame frame = new JFrame();
 
@@ -12,7 +14,7 @@ public class RectangleViewer
 
       RectangleComponent component = new RectangleComponent();
       frame.add(component);
-//umm
+      
       frame.setVisible(true);
    }
 }
