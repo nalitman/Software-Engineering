@@ -20,6 +20,15 @@ public class RectangleComponent extends JComponent
        box = new Rectangle(x, y, w, h);
        
     }
+    
+   public RectangleComponent(int x, int y, int w, int h)
+   {
+       this.x = x;
+       this.y = y;
+       this.w = w;
+       this.h = h;
+       box = new Rectangle(x, y, w, h);
+    }
    public void paintComponent(Graphics g)
    {  
       // Recover Graphics2D
@@ -37,4 +46,12 @@ public class RectangleComponent extends JComponent
       // Draw moved rectangle
       g2.draw(box);
    }
+  public void nextFrame()
+  {
+      //updates the objects in the cityscape so they are animated
+      //for (int i = 50; i <200; 1 == 10)
+      //{
+          
+      //box.translate(
+    }
 }
