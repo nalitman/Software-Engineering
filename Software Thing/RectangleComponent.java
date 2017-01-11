@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import javax.swing.JComponent;
+import java.awt.Color;
 
 /*
    A component that draws two rectangles.
@@ -49,9 +50,14 @@ public class RectangleComponent extends JComponent
   public void nextFrame()
   {
       //updates the objects in the cityscape so they are animated
-      //for (int i = 50; i <200; 1 == 10)
-      //{
+      
+      //Change color of the box
+     
+      
+      
+      box.translate(10,10);
           
-      //box.translate(
+      
+      repaint();
     }
 }

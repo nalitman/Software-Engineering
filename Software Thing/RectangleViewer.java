@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class RectangleViewer
 {
-    final static int ANIMATION_TIME_IN_SECONDS = 60;
+    final static int ANIMATION_TIME = 60;
     
    public static void main(String[] args) throws InterruptedException
    {
@@ -30,11 +30,11 @@ public class RectangleViewer
       
       
       // animate the cityscape
-      /* for (int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds ++ )
-       * {
-       *     component.nextFrame();
-       *     Tread.sleep(1000);
-       * }
-       */
+       for (int seconds = 0; seconds < ANIMATION_TIME; seconds ++ )
+        {
+            component.nextFrame();
+            Thread.sleep(1000);
+       }
+       
    }
 }
