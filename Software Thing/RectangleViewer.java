@@ -8,7 +8,7 @@ public class RectangleViewer
    {
       JFrame frame = new JFrame();
 
-      frame.setSize(300, 400);
+      frame.setSize(1500, 1000);
       frame.setTitle("Two rectangles");
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -32,7 +32,8 @@ public class RectangleViewer
       // animate the cityscape
        for (int seconds = 0; seconds < ANIMATION_TIME; seconds ++ )
         {
-            component.nextFrame();
+            component.nextFrame(frame.getGraphics(), seconds);
+            component2.nextFrame(frame.getGraphics(), seconds);
             Thread.sleep(1000);
        }
        
