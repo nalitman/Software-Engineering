@@ -3,11 +3,11 @@ import javax.swing.JFrame;
 
 public class CircleViewer
 {
-    final static int ANIMATION_TIME = 60;
+    final static int ANIMATION_TIME = 60000;
     public static void main(String[] args) throws InterruptedException
     {
         JFrame frame = new JFrame();
-        frame.setSize(800, 800);
+        frame.setSize(1366, 768);
         frame.setTitle("Display");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -20,7 +20,7 @@ public class CircleViewer
         {
             circle.nextFrame(frame.getGraphics(), seconds);
             
-            Thread.sleep(1000);
+            Thread.sleep(3000);
        }
     }
 }

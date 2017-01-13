@@ -24,22 +24,39 @@ public class CircleComponent extends JComponent
         //Recover Graphics 2D
         Graphics2D g2 = (Graphics2D) g;
         int num, Cx, Cy, Cd;
-        
+           int colIndex;
         //Draw a circle
         Ellipse2D.Double circle1 = new Ellipse2D.Double(5, 10, 100, 100);
         g2.draw(circle1);
         
         Random gen = new Random();
         
-        num = gen.nextInt(100) + 10;
+        num = gen.nextInt(400) + 100;
         
         for(int k = 0; k <= num; k++)
         {
-            Cx = gen.nextInt(800) + 1;
-            Cy = gen.nextInt(800) + 1;
-            Cd = gen.nextInt(25) + 5;
+            Cx = gen.nextInt(1366) + 1;
+            Cy = gen.nextInt(768) + 1;
+            Cd = gen.nextInt(250) + 5;
+         
+        
+        colIndex = gen.nextInt(5) +1;
+        if(colIndex == 5)
+        col = Color.BLUE;
+        
+        else if(colIndex == 4)
+        col = Color.YELLOW;
+        
+        else if(colIndex == 3)
+        col = Color.MAGENTA;
+        
+        else if(colIndex == 2)
+        col = Color.GREEN;
+        
+        else
+        col = Color.RED;
             Ellipse2D.Double circleX = new Ellipse2D.Double(Cx, Cy, Cd, Cd);
-            
+            g2.setColor(col);
             g2.draw(circleX);
         }
     }
@@ -48,14 +65,12 @@ public class CircleComponent extends JComponent
     {
         page2 = (Graphics2D) page;
         
-        if(time % 3 == 0)
-            col = Color.BLUE;
-        else if(time % 2 == 0)
-            col = Color.RED;
-        else
-            col = Color.GREEN;
+        Random gen = new Random();
+        
+        
             
         page.setColor(col);
+        repaint();
     }
     
     public int getX()
